@@ -1,0 +1,135 @@
+html{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body{
+  /* background-color: black; */
+  background: linear-gradient(to bottom, #45494a 0%, #000000 100%);
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+div{
+  margin-bottom: 50px;
+}
+
+.rootContainer{
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  padding: 5px;
+  overflow-y: scroll;
+}
+
+.rangeLabels > label{
+  min-height: 20px;
+}
+
+.trackButtonContainer{
+  display: grid;
+  place-items: center;
+}
+
+.numberRange{
+  width: 60px;
+}
+
+.numberRangeButton{
+  width: 65px;
+  height: 30px;
+  color: white;
+  background-color: rgb(43, 40, 40);
+  border-style: none;
+}
+
+#fileContainer{
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
+  border-style: dotted;
+  border-color: rgb(125, 166, 194);
+  background-color: rgb(186, 218, 228);
+  padding: 0;
+}
+
+#fileContainer:hover{
+  background-color: rgb(125, 166, 194);
+}
+
+#fileDialog{
+  height: 100%;
+  width: 100%;
+}
+
+#playButton{
+  margin-right: 20px;
+  border-style: none;
+  background-color: rgb(56, 170, 56);
+  color: #272829;
+  width: 70px;
+  height: 30px;
+}
+
+#playButton:hover{
+  background-color: rgb(35, 201, 35);
+}
+
+#pauseButton{
+  border-style: none;
+  background-color: rgb(201, 40, 40);
+  color: #272829;
+  width: 70px;
+  height: 30px;
+}
+
+#pauseButton:hover{
+  background-color: rgb(190, 20, 20);
+}
+
+#fullTrackTime{
+  float: right;
+}
+
+#trackRange{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#downloadContainer{
+  display: grid;
+  place-items: center;
+}
+
+#downloadContainer > div{
+  padding-top: 20px;
+  width: 30vw;
+  display: grid;
+  place-items: center;
+  border-style: solid;
+  border-color: black;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

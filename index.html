@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Music Editor</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="index.css">
+
+<script src="index.js" defer></script>
+<script src="mp3.js"></script>
+
+</head>
+
+<body>
+
+    <div class="rootContainer">
+
+      <div id="fileContainer">
+        <input id="fileDialog" type='file' onchange="loadFile()"/>
+        <!-- <label>choose a file or drag and drop</label> -->
+      </div>
+      
+      <div class="trackButtonContainer">
+        <span>
+          <button id="playButton" onclick="playSong()">Play</button>
+          <button id="pauseButton" onclick="pauseSong()">Pause</button>
+        </span>
+      </div>
+
+      <div class="rangeContainer">
+        
+        <span class="rangeLabels"> 
+          <label id="currentTime"></label>
+          <label id="fullTrackTime"></label>
+        </span>
+
+        <input type="range" min="0"  value="0" class="slider" id="trackRange" oninput="trackRangeChange()">
+        
+        <!-- <span>
+          <input class="numberRange" type="number" id="startTime" name="startTime" min="1">
+          <input class="numberRange"  type="number" id="endTime" name="endTime" min="1">
+        </span> -->
+      
+      </div>
+
+      <div id="downloadContainer">
+
+        <div>
+
+          <label>Start Time:</label>
+          <input class="numberRange" type="number" id="startTime" name="startTime" min="1">
+        </br>
+          <label>End Time:</label>
+          <input class="numberRange"  type="number" id="endTime" name="endTime" min="1">
+        </br>
+          <button class="numberRangeButton" onclick="trimSong()">Trim</button>
+        
+
+        <div class="messageContainer">
+          <label id="userMessage"></label>
+        </div>
+
+      </div>
+
+    </div>
+
+      <audio  controls ondurationchange="setValues()" ontimeupdate="updateTime()"></audio>
+
+  </div>
+
+</body>
+
+<script>
+</script>
+
+</html>
